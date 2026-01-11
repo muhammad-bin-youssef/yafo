@@ -24,9 +24,3 @@ yafo(Yet Another Auto File Manger)
 # 'yafo' end it with yafo and you may add "-" after yafo for syntax the program automatically will
 # delet it
 
-# --------------------------------------What argument you could add--------------------------------------
-
-#
-
-# Legal charecters uppercase (A–Z), lowercase (a–z) letters, digits (0–9), hyphens (-),
-# underscores (_), and a single period (.)
