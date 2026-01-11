@@ -1,4 +1,4 @@
-# yafo
+# yafo (in devolping stage)
 yafo(Yet Another Auto File Manger)
 # --------------------------------------NAME--------------------------------------
 
