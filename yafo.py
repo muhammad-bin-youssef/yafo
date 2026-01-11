@@ -33,51 +33,58 @@
 import os 
 import time
 import shutil
-import re
 
 # golbal variable
 folders = []
 
 #constant
-start = '/home/mhy/Documents/py'
+start = '/home/mhy/Documents'
 # --------------------------------------Functions--------------------------------------
 
-def search_system():
+def make_map():
+    def folder_maker(path, file, subfolder):
+        folders = {
+            "path" : path,
+            "dirName" : os.path.dirname(path),
+            "baseName" : os.path.basename(path),
+            "files" : file,
+            "subFolders" : subfolder,
+            "date" : "", 
+            }
+        return folders
     for path, subfolder, file  in os.walk(start):
         folders.append(folder_maker(path, file, subfolder))
     
-def is_yafoFile(fileName): 
+
+def is_yafoFile(fileName, j, i): 
     if type(fileName) == 'list':
-        #
         if 'yafo' in fileName:
-            return True
-        return False
+            move_file(os.path.join(folders[i]['path'],folders[i]['files'][j]))
+    if type(fileName) == 'str':
+        move_file(os.path.join(folders[i]['path'],folders[i]['files'][j]))
+        
 
 
-def change_name(fileName, *path):
-    re_obj = re.compile(r'[\d\w\-\\\/\.]+?yafo')                                  
-    name = re_obj.search(fileName)
-    # fileName[: name.span()[1]-4] is the destination
-    # fileName[name.span([1]:)] the original file name
-    #move_file()
-    print(type(path))
-def move_file(fileName, destination):
-    '''This func take two arg. (fileName, destination)'''
-    shutil.move(fileName, destination)    
+def move_file(filePath): # file path + old file name 
+    pfile = os.path.basename(filePath)
+    for i in range(len(folders)):
+        if folders[i]['baseName'] == pfile[:pfile.index('yafo')]:
+            newFIle = pfile[(pfile.index('yafo') + 4):]
+            shutil.move(filePath, os.path.join(folders[i]['path'], newFIle))
+            break
 
-    
-def folder_maker(path, file, subfolder):
-    """Take three arguments (path, file, subfolder) return dict""" 
-    folders = {
-        "path" : path,
-        "dirName" : os.path.dirname(path),
-        "baseName" : os.path.basename(path),
-        "files" : file,
-        "subFolders" : subfolder,
-        "date" : "", 
-        }
-    return folders
+def machine():
+    for i in range(len(folders)):
+        if type(folders[i]['files']) == 'list':
+            for j in range(len(folders[i]['files'])):
+                is_yafoFile(folders[i]['files'][j],j ,i)
+
+
+
 
 if __name__ == '__main__':
-    search_system() 
-    change_name('documentation_falk-ajkf.akldyafoyafo_my_project.txt')
+    make_map() 
+    move_file('/home/mhy/Documents/py/Documentsyafotry.txt')
+
+
+
