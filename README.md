@@ -1,6 +1,4 @@
-# yafo (in devolping stage)
-yafo(Yet Another Auto File Manger)
-# --------------------------------------NAME--------------------------------------
+# yafo (in devolping) --------------------------------------NAME--------------------------------------
 
 # yafo -> Yet Another File Organizer
 
@@ -11,6 +9,8 @@ yafo(Yet Another Auto File Manger)
 # for you application web but onther path for your wallpapers or anothr one for your familiy
 
 # --------------------------------------How it work--------------------------------------
+
+# rhis just example and will change I will change how the program will work
 
 # This program choose what files to orginize and what to ignore depending on the fiel name
 # exampel: Documentationyafo-my_project.txt
