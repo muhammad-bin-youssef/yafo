@@ -77,16 +77,14 @@ def move_file(filePath): # file path + old file name
 
 def machine():
     for i in range(len(folders)):
-        if type(folders[i]['files']) == 'list':
-            for j in range(len(folders[i]['files'])):
-                is_yafoFile(folders[i]['files'][j],j ,i)
+        for j in range(len(folders[i]['files'])):
+            is_yafoFile(folders[i]['files'][j],j ,i)
 
 
 
 
 if __name__ == '__main__':
     make_map() 
-    move_file('/home/mhy/Documents/py/Documentsyafotry.txt')
-
+    machine()
 
 
