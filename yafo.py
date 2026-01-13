@@ -59,8 +59,10 @@ def make_map():
 def is_yafoFile(fileName, j, i): 
     if type(fileName) == 'list':
         if 'yafo' in fileName:
+            print("list")
             move_file(os.path.join(folders[i]['path'],folders[i]['files'][j]))
     if type(fileName) == 'str':
+        print("file")
         move_file(os.path.join(folders[i]['path'],folders[i]['files'][j]))
         
 
