@@ -1,11 +1,11 @@
-# yafo (in devolping) --------------------------------------NAME--------------------------------------
+# yafo (abanded) --------------------------------------NAME--------------------------------------
 
 # yafo -> Yet Another File Organizer
 
 # --------------------------------------Why did I make it--------------------------------------
 
 # This program is Slow file manger
-# Remeber sometimes when you downoads images system automaticle download it into 'Downlaods' but you have seprate folders like one for
+# Remeber sometimes when you downloads images system automaticle download it into 'Downlaods' but you have seprate folders like one for
 # for you application web but onther path for your wallpapers or anothr one for your familiy
 
 # --------------------------------------How it work--------------------------------------
